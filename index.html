@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mago Play | Achadinhos & Cupons</title>
+  <meta name="description" content="Central Oficial Mago Play. Grupo VIP de Achadinhos e Robô com Inteligência Artificial para a Shopee.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #09090b;
+      --card-bg: #18181b;
+      --card-border: #27272a;
+      --primary: #7c3aed;
+      --accent: #f97316;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 32px 16px 48px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* HEADER */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .avatar {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3f3f46;
+      margin-bottom: 12px;
+      background: #18181b;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .bio {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 400;
+      line-height: 1.4;
+      max-width: 300px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #14532d;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #86efac;
+      margin-top: 10px;
+    }
+
+    /* BOTOES E CARDS SOLIDOS */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    /* BOTAO DE DESTAQUE: COR SOLIDA PURA */
+    .btn-destaque {
+      background: var(--accent);
+      color: #ffffff;
+      border: 1px solid #ea580c;
+    }
+
+    .btn-destaque:hover {
+      background: #ea580c;
+    }
+
+    .btn-destaque .btn-title {
+      color: #ffffff;
+    }
+
+    .btn-destaque .btn-desc {
+      color: #ffedd5;
+    }
+
+    /* BOTOES SECUNDARIOS: FUNDO SOLIDO ESCURO */
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover {
+      background: #27272a;
+    }
+
+    .btn-content {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .btn-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .arrow {
+      font-size: 16px;
+      font-weight: 700;
+      color: inherit;
+      opacity: 0.8;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #71717a;
+      line-height: 1.5;
+    }
+
+    .badge-shopee {
+      display: inline-block;
+      background: #27272a;
+      color: #d4d4d8;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- PERFIL -->
+    <div class="profile">
+      <img class="avatar" src="capa_mago.jpg" alt="Mago Play" onerror="this.src='https://api.dicebear.com/7.x/identicon/svg?seed=MagoPlay'">
+      <h1 class="name">Mago Play</h1>
+      <p class="bio">Ofertas verificadas, cupons de desconto e garimpo com IA na Shopee.</p>
+      <span class="tag">Atualizado Hoje</span>
+    </div>
+
+    <!-- BOTOES SOLIDOS (SEM EMOJI / SEM DEGRADE) -->
+    <div class="links">
+
+      <!-- BOTAO 1: CANAL VIP TELEGRAM (COR SOLIDA LARANJA) -->
+      <a href="https://t.me/+O1F2y4Rup61iNjkx" target="_blank" rel="noopener noreferrer" class="btn btn-destaque">
+        <div class="btn-content">
+          <span class="btn-title">Entrar no Grupo VIP de Achadinhos</span>
+          <span class="btn-desc">Bugs de preço e ofertas diárias com até 70% OFF</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <!-- BOTAO 2: ROBO DO MAGO SHOPEE -->
+      <a href="https://t.me/superbot001_bot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        <div class="btn-content">
+          <span class="btn-title">Robô Mago Shopee (IA)</span>
+          <span class="btn-desc">Envie foto, áudio ou texto para achar o menor preço</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <!-- BOTAO 3: CUPONS & FRETE GRATIS -->
+      <a href="https://s.shopee.com.br/an_redir?origin_link=https%3A%2F%2Fshopee.com.br%2Fm%2Fcupons-diarios" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        <div class="btn-content">
+          <span class="btn-title">Resgatar Cupons Shopee</span>
+          <span class="btn-desc">Página oficial de cupons de frete grátis e desconto</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <!-- BOTAO 4: INSTAGRAM OFICIAL -->
+      <a href="https://instagram.com/magoplaybr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        <div class="btn-content">
+          <span class="btn-title">Instagram @magoplaybr</span>
+          <span class="btn-desc">Vídeos rápidos e novidades diárias</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+    </div>
+
+    <!-- RODAPE -->
+    <div class="footer">
+      <div class="badge-shopee">Compra 100% segura dentro do app oficial da Shopee</div>
+      <p>© 2026 Mago Play</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
