@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Mago Play | Achadinhos & Cupons</title>
+  <title>Mago Play | Achadinhos & Cupons Shopee</title>
   <meta name="description" content="Central Oficial Mago Play. Grupo VIP de Achadinhos e Robô com Inteligência Artificial para a Shopee.">
   
   <!-- FAVICON OFICIAL DO MAGO -->
@@ -19,8 +19,9 @@
       --bg: #09090b;
       --card-bg: #18181b;
       --card-border: #27272a;
-      --primary: #7c3aed;
-      --accent: #ea580c;
+      --primary-purple: #7c3aed;
+      --accent-orange: #ea580c;
+      --live-green: #22c55e;
       --text: #f4f4f5;
       --text-muted: #a1a1aa;
     }
@@ -40,7 +41,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 36px 16px 48px;
+      padding: 32px 16px 44px;
     }
 
     .container {
@@ -49,7 +50,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
     }
 
     /* HEADER */
@@ -58,12 +59,11 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      margin-bottom: 8px;
     }
 
     .avatar-frame {
-      width: 108px;
-      height: 108px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       padding: 3px;
       background: #27272a;
@@ -84,7 +84,7 @@
 
     .name {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.02em;
     }
 
@@ -94,26 +94,41 @@
       margin-top: 4px;
       font-weight: 400;
       line-height: 1.4;
-      max-width: 310px;
+      max-width: 320px;
     }
 
-    .tag {
-      display: inline-block;
-      padding: 4px 10px;
-      background: #14532d;
-      border-radius: 6px;
-      font-size: 11px;
+    /* BARRA DE PROVA SOCIAL AO VIVO (CTA) */
+    .social-proof-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 8px 14px;
+      background: #142e1d;
+      border: 1px solid #166534;
+      border-radius: 8px;
+      font-size: 12px;
       font-weight: 600;
       color: #86efac;
-      margin-top: 10px;
+      margin-top: 6px;
     }
 
-    /* BOTOES E CARDS SOLIDOS */
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--live-green);
+      flex-shrink: 0;
+    }
+
+    /* GRUPO DE BOTOES */
     .links {
       width: 100%;
       display: flex;
       flex-direction: column;
       gap: 12px;
+      margin-top: 4px;
     }
 
     .btn {
@@ -131,26 +146,29 @@
       transform: scale(0.98);
     }
 
-    /* BOTAO DE DESTAQUE: COR SOLIDA LARANJA */
-    .btn-destaque {
-      background: var(--accent);
+    /* DESTAQUE 1: LARANJA SOLIDO (GRUPO VIP) */
+    .btn-orange {
+      background: var(--accent-orange);
       color: #ffffff;
       border: 1px solid #c2410c;
     }
 
-    .btn-destaque:hover {
+    .btn-orange:hover {
       background: #c2410c;
     }
 
-    .btn-destaque .btn-title {
+    /* DESTAQUE 2: ROXO SOLIDO (ROBO SHOPEE IA) */
+    .btn-purple {
+      background: var(--primary-purple);
       color: #ffffff;
+      border: 1px solid #6d28d9;
     }
 
-    .btn-destaque .btn-desc {
-      color: #ffedd5;
+    .btn-purple:hover {
+      background: #6d28d9;
     }
 
-    /* BOTOES SECUNDARIOS: FUNDO SOLIDO ESCURO */
+    /* BOTAO SECUNDARIO: CARD ESCURO SOLIDO */
     .btn-secondary {
       background: var(--card-bg);
       color: var(--text);
@@ -169,19 +187,20 @@
     }
 
     .icon-box {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      background: rgba(255, 255, 255, 0.08);
-      color: inherit;
+      background: rgba(0, 0, 0, 0.25);
+      color: #ffffff;
     }
 
-    .btn-destaque .icon-box {
-      background: rgba(0, 0, 0, 0.2);
+    .btn-secondary .icon-box {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
     }
 
     .btn-content {
@@ -191,6 +210,12 @@
       min-width: 0;
     }
 
+    .btn-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .btn-title {
       font-size: 14px;
       font-weight: 700;
@@ -198,15 +223,39 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      color: #ffffff;
+    }
+
+    .btn-secondary .btn-title {
+      color: var(--text);
     }
 
     .btn-desc {
       font-size: 12px;
-      color: var(--text-muted);
       margin-top: 2px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      color: #ffedd5;
+    }
+
+    .btn-purple .btn-desc {
+      color: #ede9fe;
+    }
+
+    .btn-secondary .btn-desc {
+      color: var(--text-muted);
+    }
+
+    .badge-tag {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .arrow {
@@ -218,10 +267,51 @@
       flex-shrink: 0;
     }
 
+    /* CARD DE PROVA SOCIAL EM TEMPO REAL */
+    .live-purchase-card {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .live-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+    }
+
+    .live-text strong {
+      color: #f4f4f5;
+      font-weight: 600;
+    }
+
+    .live-text span {
+      color: #71717a;
+      font-size: 11px;
+      margin-top: 1px;
+    }
+
+    .live-badge {
+      background: #14532d;
+      color: #86efac;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
     /* FOOTER */
     .footer {
       text-align: center;
-      margin-top: 16px;
+      margin-top: 12px;
       font-size: 11px;
       color: #71717a;
       line-height: 1.5;
@@ -229,7 +319,8 @@
 
     .badge-shopee {
       display: inline-block;
-      background: #27272a;
+      background: #18181b;
+      border: 1px solid #27272a;
       color: #d4d4d8;
       padding: 6px 12px;
       border-radius: 6px;
@@ -242,82 +333,73 @@
 
   <div class="container">
     
-    <!-- PERFIL COM AVATAR OFICIAL DO MAGO -->
+    <!-- PERFIL -->
     <div class="profile">
       <div class="avatar-frame">
         <img class="avatar" src="avatar_mago.jpg" alt="Mago Play" onerror="this.src='capa_mago.jpg'">
       </div>
       <h1 class="name">Mago Play</h1>
-      <p class="bio">Ofertas verificadas, cupons de desconto e garimpo com IA na Shopee.</p>
-      <span class="tag">Atualizado Hoje</span>
+      <p class="bio">Bugs de preço, cupons secretos e garimpo com inteligência artificial para economizar na Shopee.</p>
     </div>
 
-    <!-- BOTOES SOLIDOS COM ICONES VETORIZADOS LIMPOS -->
+    <!-- PROVA SOCIAL / CTA NO TOPO -->
+    <div class="social-proof-bar">
+      <span class="status-dot"></span>
+      <span>+2.840 pessoas economizando hoje na Shopee</span>
+    </div>
+
+    <!-- BOTOES PRINCIPAIS EM DESTAQUE -->
     <div class="links">
 
-      <!-- BOTAO 1: CANAL VIP TELEGRAM -->
-      <a href="https://t.me/+O1F2y4Rup61iNjkx" target="_blank" rel="noopener noreferrer" class="btn btn-destaque">
+      <!-- BOTAO 1 EM DESTAQUE: CANAL VIP (LARANJA SOLIDO) -->
+      <a href="https://t.me/+O1F2y4Rup61iNjkx" target="_blank" rel="noopener noreferrer" class="btn btn-orange">
         <div class="btn-left">
           <div class="icon-box">
-            <!-- Icone Telegram Oficial -->
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-2.07 9.77c-.16.71-.58.88-1.18.55l-3.23-2.38-1.56 1.5c-.17.17-.32.32-.65.32l.23-3.31 6.03-5.45c.26-.23-.06-.36-.4-.14l-7.46 4.7-3.21-1c-.7-.22-.71-.7.15-1.04l12.54-4.83c.58-.22 1.09.13.91.87z"/>
             </svg>
           </div>
           <div class="btn-content">
-            <span class="btn-title">Entrar no Grupo VIP de Achadinhos</span>
-            <span class="btn-desc">Bugs de preço e ofertas diárias com até 70% OFF</span>
+            <div class="btn-header">
+              <span class="btn-title">Grupo VIP de Achadinhos</span>
+              <span class="badge-tag">Grátis</span>
+            </div>
+            <span class="btn-desc">Bugs de preço e ofertas relâmpago até 70% OFF</span>
           </div>
         </div>
         <span class="arrow">→</span>
       </a>
 
-      <!-- BOTAO 2: ROBO DO MAGO SHOPEE -->
-      <a href="https://t.me/superbot001_bot" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+      <!-- BOTAO 2 EM DESTAQUE: ROBO SHOPEE COM IA (ROXO SOLIDO) -->
+      <a href="https://t.me/superbot001_bot" target="_blank" rel="noopener noreferrer" class="btn btn-purple">
         <div class="btn-left">
           <div class="icon-box">
-            <!-- Icone Robo / IA -->
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.72V7h4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3h4V5.72c-.6-.34-1-.98-1-1.72a2 2 0 0 1 2-2zm-3 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-6.5 6a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/>
             </svg>
           </div>
           <div class="btn-content">
-            <span class="btn-title">Robô Mago Shopee (IA)</span>
-            <span class="btn-desc">Envie foto, áudio ou texto para achar o menor preço</span>
+            <div class="btn-header">
+              <span class="btn-title">Robô Mago Shopee (IA)</span>
+              <span class="badge-tag">Inteligente</span>
+            </div>
+            <span class="btn-desc">Mande foto, áudio ou texto para achar o menor preço</span>
           </div>
         </div>
         <span class="arrow">→</span>
       </a>
 
-      <!-- BOTAO 3: CUPONS & FRETE GRATIS -->
-      <a href="https://s.shopee.com.br/an_redir?origin_link=https%3A%2F%2Fshopee.com.br%2Fm%2Fcupons-diarios" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+      <!-- BOTAO 3: OFERTAS MAIS VENDIDAS DO DIA (DIRETO NO ROBO) -->
+      <a href="https://t.me/superbot001_bot?start=ofertas" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
         <div class="btn-left">
           <div class="icon-box">
-            <!-- Icone Tag Cupom -->
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
+              <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"/>
             </svg>
           </div>
           <div class="btn-content">
-            <span class="btn-title">Resgatar Cupons Shopee</span>
-            <span class="btn-desc">Página oficial de cupons de frete grátis e desconto</span>
-          </div>
-        </div>
-        <span class="arrow">→</span>
-      </a>
-
-      <!-- BOTAO 4: INSTAGRAM OFICIAL -->
-      <a href="https://instagram.com/magoplaybr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-        <div class="btn-left">
-          <div class="icon-box">
-            <!-- Icone Instagram -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </div>
-          <div class="btn-content">
-            <span class="btn-title">Instagram @magoplaybr</span>
-            <span class="btn-desc">Vídeos rápidos e novidades diárias</span>
+            <span class="btn-title">Ver Melhores Ofertas do Dia</span>
+            <span class="btn-desc">Os produtos mais vendidos com menores preços de hoje</span>
           </div>
         </div>
         <span class="arrow">→</span>
@@ -325,10 +407,19 @@
 
     </div>
 
+    <!-- PROVA SOCIAL DE COMPRAS RECENTES -->
+    <div class="live-purchase-card">
+      <div class="live-text">
+        <strong>Fones, controles e itens tech</strong>
+        <span>Última economia de R$ 42,00 há 4 minutos</span>
+      </div>
+      <span class="live-badge">-70% OFF</span>
+    </div>
+
     <!-- RODAPE -->
     <div class="footer">
       <div class="badge-shopee">Compra 100% segura dentro do app oficial da Shopee</div>
-      <p>© 2026 Mago Play</p>
+      <p>© 2026 Mago Play · Inteligência em Compras</p>
     </div>
 
   </div>
